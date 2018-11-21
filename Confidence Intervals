@@ -1,0 +1,15 @@
+#Grade 5 90% CI is 334.13 + or - 20.29
+> mean(accel$Grade.5)
+[1] 334.1311
+> qt(.025,length(accel)-1)*(sd(accel$Grade.5)/sqrt(length(accel)))
+[1] -20.2888
+#Grade 6 90% CI is 334.18 + or - 20.42
+> mean(accel$Grade.6)
+[1] 334.1803
+> qt(.025,length(accel)-1)*(sd(accel$Grade.6)/sqrt(length(accel)))
+[1] -20.41703
+#Grade 7 90% CI is 328.69 + or - 20.06
+> mean(accel$Grade.7)
+[1] 328.6885
+> qt(.025,length(accel)-1)*(sd(accel$Grade.7)/sqrt(length(accel)))
+[1] -20.06088
