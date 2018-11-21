@@ -1,0 +1,13 @@
+> accel<-X1718PelhamData
+> mean(accel$`Grade 5`)
+[1] 334.1311
+> mean(accel$`Grade 6`)
+[1] 334.1803
+> mean(accel$`Grade 7`)
+[1] 333.6066
+> sd(accel$`Grade 7`)
+[1] 42.30417
+> sd(accel$`Grade 6`)
+[1] 26.56157
+> sd(accel$`Grade 5`)
+[1] 26.39474
