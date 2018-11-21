@@ -1,0 +1,9 @@
+> hist(accel$Grade.6,xlab="Scaled Scores",main="Grade 6 Scaled Scores")
+> skewness(accel$Grade.6)
+[1] -0.04902359
+> 2*sqrt(sd(accel$Grade.6)/length(accel))
+[1] 3.435861
+> kurtosis(accel$Grade.6)
+[1] -0.4599276
+> 4*sqrt(sd(accel$Grade.6)/length(accel))
+[1] 6.871722
