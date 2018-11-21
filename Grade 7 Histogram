@@ -7,3 +7,4 @@
 [1] 0.3058674
 > 4*sqrt(sd(accel$Grade.7)/length(accel))
 [1] 6.811525
+asdf
