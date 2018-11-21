@@ -7,3 +7,7 @@
 [1] -0.2779952
 > 4*sqrt(sd(accel$`Grade 5`/length(accel$`Grade 7`)))
 [1] 2.6312
+> T5<-table(accel$X5Level,accel$Elementary.School)
+> barplot(T5)
+> barplot(T5,col=c("blue","green","yellow","red"))
+> barplot(T5,col=c("red","yellow","green","blue"),legend.text=TRUE,main="Grade 5 Performance Level by School")
