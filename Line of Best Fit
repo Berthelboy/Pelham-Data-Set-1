@@ -1,0 +1,30 @@
+#I wanted to see if 6th grade test scores are a good predictor for 7th grade test scores.
+> accel7.lm<-lm(Grade.7~Grade.6,data=accel)
+> coef(accel7.lm)
+(Intercept)     Grade.6 
+ 69.9206953   0.7743359 
+> resid(accel7.lm)
+> hist(resid(accel7.lm))
+> plot(resid(accel7.lm))
+lm(formula = Grade.7 ~ Grade.6, data = accel)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-61.806  -7.907  -0.553   7.447  51.287 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 69.92070   26.39577   2.649   0.0103 *  
+Grade.6      0.77434    0.07874   9.834  4.8e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 16.2 on 59 degrees of freedom
+Multiple R-squared:  0.6211,	Adjusted R-squared:  0.6147 
+F-statistic:  96.7 on 1 and 59 DF,  p-value: 4.799e-14
+
+> plot(Grade.7~Grade.6,data=accel)
+> abline(accel7.lm)
+> abline(accel7.lm,col=red)
+#Looking at the histogram of the residuals, it appears to be skewed left, but the residual plot does not show a pattern which leads me to belive a linear model is a good fit.
+#The r-squared value of .6147 means the r value is .7840 which means there is a strong positive linear relationship between the 7th grade and 6th grade scores.
