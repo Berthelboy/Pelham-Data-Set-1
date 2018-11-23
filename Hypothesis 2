@@ -1,0 +1,24 @@
+#In Pelham Hutchinson school is considered the weaker Elementary school. 
+#To test this I will compare the mean 5th grade score of Hutchinson to that of all students.
+#The null hypothesis is that the means are equal.
+#The alternative hypothesis is that the means are not equal.
+> elem_school<-accel$Elementary.School
+> hutch<-elem_school=="Hutchinson"
+> hutch_only<-subset(accel,Elementary.School=="Hutchinson")
+> mean(hutch_only$Grade.5)
+[1] 325.8182
+> mean(accel$Grade.5)
+[1] 334.1311
+> t.test(hutch_only$Grade.5,accel$Grade.5)
+
+	Welch Two Sample t-test
+
+data:  hutch_only$Grade.5 and accel$Grade.5
+t = -1.2239, df = 35.738, p-value = 0.229
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -22.091658   5.465727
+sample estimates:
+mean of x mean of y 
+ 325.8182  334.1311 
+ Sincethe p-value of .229 < 5.4657 we fail to reject the null hypothesis that hutch has a mean 5th grade score equal to the rest of the district.
