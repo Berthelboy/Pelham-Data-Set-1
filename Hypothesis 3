@@ -1,0 +1,17 @@
+#Does accelerating students improve their performance
+#The null hypothesis is that the students in 7A have a normalized score on the 7th grade test equal to their normalized 6th score on the 6th grade test.
+#The alternative hypothesis is that the normalized scores are not equal.
+> seven_A<-subset(accel,Accelerated.=="Y")
+> t.test(seven_A$X7.Norm,seven_A$X6.Norm)
+
+	Welch Two Sample t-test
+
+data:  seven_A$X7.Norm and seven_A$X6.Norm
+t = -0.25212, df = 67.958, p-value = 0.8017
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.02796757  0.02169328
+sample estimates:
+mean of x mean of y 
+ 1.046760  1.049897 
+ Since the p-value = 0.8017 > .0217 we can reject the null hypothesis.
