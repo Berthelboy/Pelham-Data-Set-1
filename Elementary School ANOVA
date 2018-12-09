@@ -1,0 +1,4 @@
+accel<-read.csv("1718PelhamData.csv")
+elementary.aov<-aov(Grade.5~Elementary.School, data=accel)
+summary(elementary.aov)
+elemposthoc<-TukeyHSD(elementary.aov)
